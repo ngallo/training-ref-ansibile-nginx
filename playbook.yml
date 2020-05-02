@@ -1,6 +1,6 @@
 ---
 - name: Install nginx
-  hosts: host.name.ip
+  hosts: localhost
   become: true
 
   tasks:
@@ -17,7 +17,7 @@
   - name: Insert Index Page
     template:
       src: index.html
-      dest: /usr/share/nginx/html/index.html
+      dest: /var/www/html/index.nginx-debian.html 
 
   - name: Start NGiNX
     service:
