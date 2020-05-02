@@ -4,13 +4,8 @@
   become: true
 
   tasks:
-  - name: Add epel-release repo
-    yum:
-      name: epel-release
-      state: present
-
   - name: Install nginx
-    yum:
+    apt:
       name: nginx
       state: present
 
